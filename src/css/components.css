@@ -1,0 +1,43 @@
+nav { width: 100%; height: 70px; background-color: #141414; border-bottom: 1px solid #ddd; }
+nav .nav_inner {margin: 0 auto; width: 100%; max-width: 1200px; height: 100%; display: flex; justify-content: space-between; align-items: center;}
+nav .nav_inner h2 a {font-size: 22px; color: #fff;}
+nav .nav_inner .nav_right ul li {padding: 3px; background: #fff; border-radius: 5px;}
+nav .nav_inner .nav_right ul li button {width: 32px; height: 32px; position: relative; font-size: 0; background: url("/public/images/shopping_basket.png")no-repeat center; background-size: 100% auto; cursor: pointer;}
+nav .nav_inner .nav_right ul li button .product_cout { width: 16px; height: 16px; display: none; position: absolute; right: -3px; bottom: -3px; font-size: 13px; color: #fff; text-align: center; vertical-align: middle; background: red; border-radius: 50%;}
+nav .nav_inner .nav_right ul li button .product_cout.on {display: inline-block;}
+    
+.content {width: 100%;}
+.content .banner {width: 100%; height: 400px; background: #adbdde url("/public/images/redux_bg.png")no-repeat center;}
+.content .section {padding: 60px 0; width: 100%; max-width: 1200px; margin: 0 auto;}
+.content .section .section_top {margin-bottom: 40px; font-size: 26px;}
+.content .section .product_list {width: 100%; display: flex; flex-wrap: wrap; gap: 10px; }
+.content .section .product_list li {padding: 10px; width: calc(25% - 7.5px); border: 1px solid #ddd;}
+.content .section .product_list li .product_img {margin-bottom: 20px; width: 100%; height: 270px; background: url("/public/images/redux_bg.png")no-repeat center; background-size: 100px auto;}
+.content .section .product_list li .product_info {margin-bottom: 25px;}
+.content .section .product_list li .product_info .name {margin-bottom: 10px; font-size: 20px; }
+.content .section .product_list li .product_info .price { font-size: 16px; color: #08090a;}
+.content .section .product_list li .button_wrap {width: 100%;}
+.content .section .product_list li .button_wrap button {width: 100%; padding: 10px 0; text-align: center; cursor: pointer;}
+.content .section .product_list li .button_wrap button:first-child {margin-bottom: 5px;}
+
+.btn_type1{background-color: #0a49cc; color: #fff;}
+.btn_type2{background-color: #fff; border: 1px solid #ddd;}
+
+
+.top {padding: 50px 0; border-bottom: 1px solid #ddd;}
+.top p {font-size: 32px; text-align: center;}
+.cart .item_list {min-height: 567px;}
+.all_select {padding-bottom: 10px; border-bottom: 1px solid #aaa;}
+.items {padding: 15px 30px 15px 0; display: flex; align-items: center; justify-content: space-between;  border-bottom: 1px solid #ddd;}
+.items .info {display: flex; align-items: center; gap: 30px;}
+.items .info .item_img {width: 50px; height: 50px; background: url("/public/images/redux_bg.png")no-repeat center; background-size: 90%;}
+.items .info .price {width: 70px;}
+.total {margin-top: 10px; text-align: right; }
+.total span {font-weight: 600; color: red; text-decoration: underline;}
+.amount {display: flex; gap: 5px;}
+.amount button {display: inline-flex; justify-content: center; align-items: center; padding: 3px; font-weight: 600; background-color: #eee; border: 1px solid #ddd; border-radius: 2px;}
+
+
+.footer {padding: 80px 0; color: #fff; text-align: center; background: #141414; border-top: 1px solid #ddd;}
+
+
