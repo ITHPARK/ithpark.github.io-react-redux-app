@@ -51,16 +51,22 @@ const items = createSlice({
 
     //상태 업데이트를 위한 action 생성자.
     reducers: {
+        //아이템 개수 추가하기
         addItem: (state, action) => {
-
             //action.payload는 dispatch할 때 전달된 인수값
+            //넘어온 인수와 id값이 같으면 그 배열의 index값을 반환
             let num = state.findIndex(a => a.id === action.payload);
             state[num].amount++;
         },
+
+        //아이템 개수 줄이기
         removeItem: (state, action) => {
+            
             let num = state.findIndex(a => a.id === action.payload);
             state[num].amount--;
         },
+
+        //아이템 삭제
         deleteItem(state,action){
             
             const id = action.payload.id;
@@ -72,6 +78,7 @@ const items = createSlice({
 })
 
 export const { addItem, removeItem, deleteItem } = items.actions;
+
 export default configureStore({
     reducer: {
         items: items.reducer,

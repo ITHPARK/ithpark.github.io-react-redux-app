@@ -11,10 +11,12 @@ const Product = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  //카트에 담기
   const addCart = (id) => {
 
     const result = window.confirm("상품이 장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?");
 
+    //addItem 액션 실행
     dispatch(addItem(id));
 
     if(result) navigate("/cart");

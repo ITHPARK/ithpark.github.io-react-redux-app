@@ -11,10 +11,10 @@ function Cart() {
   const [itemLen, setItemLen] = useState(items.length);
 
   useEffect(() => {
+    //페이지 최초 진입시 전체 선택상태
     const arr = [];
     items.map(a => arr.push(a.id));
     setSelectItem(arr);
-    
   }, [])
   
 
@@ -31,28 +31,35 @@ function Cart() {
     }
   }
 
+  //전체 선택, 해제
   const onAll = (check) => {
     if(check) {
       const arr = [];
       items.map(a => arr.push(a.id));
+
+      //모든 배열의 id를 추가
       setSelectItem(arr);
     }else {
+      //빈 배열로 반환
       setSelectItem([]);
     }
   }
 
+  //아이템 삭제
   const onDelete = (data, id) => {
-
     dispatch(deleteItem(data, id));
+
+    //선택된 id랑 다른 요소들만 반환, 즉 삭제를 선택한 배열빼고 반환
     setSelectItem(selectItem.filter(a => a !== id));
   }
 
   const Price = items.map(a => {
-
+    //각 상품의 수량에 따라 가격 증가 또는 감소
     return (selectItem.includes(a.id) &&  a.amount > 0) ?
     Object.values(a)[2] * a.amount : null 
   })
 
+  //장바구니 모든 상품의 가격을 더한 총 가격
   const TotalPrice = Price.reduce((a,b) => a+b)
   
   return (
@@ -73,6 +80,8 @@ function Cart() {
             <label for="allSelecte">전체 선택</label>
           </div>
           <div className='item_list'>
+
+            {/* 개수가 1개 이상만 나타냄 */}
             {items.map((a, i) => {
               if(a.amount > 0) {
                 return(

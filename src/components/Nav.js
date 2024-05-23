@@ -14,6 +14,7 @@ const Nav = () => {
     let num;
 
     useEffect(() => {
+        //장바구니에 1개 이상인 상품이 몇개 담겼는지 표시
         setItemLength(items.filter((item) => item.amount > 0).length);
     }, [items])
 
