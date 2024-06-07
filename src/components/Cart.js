@@ -102,7 +102,7 @@ function Cart() {
                           <button onClick={() => dispatch(addItem(a.id))}>+</button>
                       </div>
                     </div>
-                    <button onClick={e => onDelete({id: a.id})}>삭제</button>
+                    <button onClick={e => onDelete(a.id)}>삭제</button>
                   </div>
                 )
               }

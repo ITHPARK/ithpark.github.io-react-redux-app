@@ -57,6 +57,7 @@ const items = createSlice({
             //넘어온 인수와 id값이 같으면 그 배열의 index값을 반환
             let num = state.findIndex(a => a.id === action.payload);
             state[num].amount++;
+         
         },
 
         //아이템 개수 줄이기
@@ -64,15 +65,17 @@ const items = createSlice({
             
             let num = state.findIndex(a => a.id === action.payload);
             state[num].amount--;
+
+           
         },
 
         //아이템 삭제
         deleteItem(state,action){
-            
-            const id = action.payload.id;
+        
 
             //amount가 0이 되면 상품 행은 자동적으로 사라지게 된다.
-            state[id-1].amount = 0;
+            state[action.payload-1].amount = 0;
+
         }
     }
 })
